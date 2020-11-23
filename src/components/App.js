@@ -13,22 +13,20 @@ class App extends Component {
     return (
       <div id="main">
         <Router>
-          <div className="app">
-            <ul className="App-header">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
-            </ul>
-            <Switch>
-              <Route exact path="/" component={Home}></Route>
-              <Route exact path="/about" component={About}></Route>
-              <Route component={NotFound}></Route>
-            </Switch>
-            <LocationDisplay />
-          </div>
+          <ul className="App-header">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+          </ul>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route component={NotFound} />
+          </Switch>
+          <LocationDisplay />
         </Router>
       </div>
     );
@@ -36,7 +34,7 @@ class App extends Component {
 }
 
 export function NotFound() {
-  return <h3>No match.</h3>;
+  return <h3>No match</h3>;
 }
 
 export function Home() {
