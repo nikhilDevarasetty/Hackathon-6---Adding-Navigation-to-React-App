@@ -27,16 +27,16 @@ class App extends Component {
               <Route exact path="/about" component={About}></Route>
               <Route component={NotFound}></Route>
             </Switch>
+            <LocationDisplay />
           </div>
         </Router>
-        {/* <UseLocation /> */}
       </div>
     );
   }
 }
 
 function NotFound() {
-  return <h3>No match</h3>;
+  return <h3>'No match'</h3>;
 }
 
 function Home() {
@@ -47,8 +47,9 @@ function About() {
   return <h3>You are on the about page</h3>;
 }
 
-function UseLocation() {
-  // return <div data-testid="location-display">{useLocation().pathname}</div>;
+function LocationDisplay() {
+  let location = useLocation();
+  return <div data-testid="location-display">{location.pathname}</div>;
 }
 
 export default App;
