@@ -12,22 +12,22 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <Router>
-          <ul className="App-header">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-          </ul>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route component={NotFound} />
-          </Switch>
-          <LocationDisplay />
-        </Router>
+        {/* <Router> */}
+        <ul className="App-header">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route component={NotFound} />
+        </Switch>
+        <LocationDisplay />
+        {/* </Router> */}
       </div>
     );
   }
