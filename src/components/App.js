@@ -25,7 +25,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home}></Route>
               <Route exact path="/about" component={About}></Route>
-              <Route exact path="*" component={NotFound}></Route>
+              <Route component={NotFound}></Route>
             </Switch>
             <LocationDisplay />
           </div>
@@ -36,7 +36,7 @@ class App extends Component {
 }
 
 export function NotFound() {
-  return <h3>No match</h3>;
+  return <h3>No match.</h3>;
 }
 
 export function Home() {
