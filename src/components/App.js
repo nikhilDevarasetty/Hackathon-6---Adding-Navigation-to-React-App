@@ -35,19 +35,19 @@ class App extends Component {
   }
 }
 
-function NotFound() {
+export function NotFound() {
   return <h3>'No match'</h3>;
 }
 
-function Home() {
+export function Home() {
   return <h3>You are home</h3>;
 }
 
-function About() {
+export function About() {
   return <h3>You are on the about page</h3>;
 }
 
-function LocationDisplay() {
+export function LocationDisplay() {
   let location = useLocation();
   return <div data-testid="location-display">{location.pathname}</div>;
 }
