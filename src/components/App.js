@@ -36,7 +36,7 @@ class App extends Component {
 }
 
 export function NotFound() {
-  return <h3>'No match'</h3>;
+  return <h3>No match</h3>;
 }
 
 export function Home() {
